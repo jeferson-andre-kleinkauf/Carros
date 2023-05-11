@@ -1,0 +1,23 @@
+package serhumano;
+
+public class Adulto extends Pessoa {
+	private String cpf;
+	private int rg;
+	public Adulto() {
+		super();
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public int getRg() {
+		return rg;
+	}
+	public void setRg(int rg) {
+		this.rg = rg;
+	}
+	
+	
+}

@@ -1,0 +1,26 @@
+package serhumano;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Pessoa pessoaA = new Pessoa();
+		Crianca criancaA = new Crianca();
+		Adulto adultoA = new Adulto();
+		Professor professorA = new Professor();
+		pessoaA.setIdade(25);
+		pessoaA.setNome("Joaquim");
+		criancaA.setPeso(80);
+		criancaA.setTamanho(1.50);
+		adultoA.setCpf("014.030.047-56");
+		adultoA.setRg(405020);
+		professorA.setDisciplina("matematica");
+		professorA.setEspecializacao("mestre");
+		pessoaA.andar();
+		criancaA.brigar();
+		adultoA.dirigir();
+		professorA.lecionar();
+		
+	}
+
+}

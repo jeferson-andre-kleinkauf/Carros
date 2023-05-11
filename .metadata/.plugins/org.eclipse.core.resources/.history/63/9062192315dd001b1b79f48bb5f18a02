@@ -1,0 +1,52 @@
+package serhumano;
+import java.util.ArrayList;
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Object> objetos = new ArrayList<Object>();
+		Pessoa pessoaA = new Pessoa();
+		Crianca criancaA = new Crianca();
+		Adulto adultoA = new Adulto();
+		Professor professorA = new Professor();
+		pessoaA.setIdade(25);
+		pessoaA.setNome("Joaquim");
+		criancaA.setPeso(80);
+		criancaA.setTamanho(1.50);
+		adultoA.setCpf("014.030.047-56");
+		adultoA.setRg(405020);
+		professorA.setDisciplina("matematica");
+		professorA.setEspecializacao("mestre");
+		objetos.add(professorA);
+		objetos.add(pessoaA);
+		objetos.add(adultoA);
+		objetos.add(criancaA);
+		int i = objetos.size();
+		Object x;
+		Pessoa p;
+		Crianca c;
+		Adulto a;
+		Professor pr;
+		for (int j = 0; j < i; j++) {
+			x = objetos.get(j);
+			if (x instanceof Pessoa) {
+				p = (Pessoa)x;
+				p.andar();
+			}
+			if (x instanceof Crianca) {
+				c = (Crianca)x;
+				c.brigar();
+			}
+			if (x instanceof Adulto) {
+				a = (Adulto)x;
+				a.dirigir();
+				
+			}
+			if (x instanceof Professor) {
+				pr = (Professor)x;
+				pr.lecionar();
+			}
+		}
+	}
+
+}

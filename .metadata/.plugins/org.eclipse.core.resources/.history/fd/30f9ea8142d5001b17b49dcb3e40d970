@@ -1,0 +1,35 @@
+package gerenciadordeprojeto;
+import java.util.ArrayList;
+public class Serie_Dramatica extends Serie {
+	ArrayList<Temporada> temporadas = new ArrayList<Temporada>();
+	
+	private String genero;
+	
+	public Serie_Dramatica() {
+		
+	}
+	
+	public Serie_Dramatica (String titulo, String sinopse, int ano, Avaliacao aval, String genero, ArrayList<Temporada> temporadas) {
+		
+		super(titulo, sinopse, ano, aval);
+		this.genero = genero;
+		this.temporadas = temporadas;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public ArrayList<Temporada> getTemporadas() {
+		return temporadas;
+	}
+
+	public void setTemporadas(ArrayList<Temporada> temporadas) {
+		this.temporadas = temporadas;
+	}
+	
+}

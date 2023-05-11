@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;gerenciadordeprojetos.serie_documental&apos; to &apos;Serie_Documental&apos;&#x0D;&#x0A;- Original project: &apos;gerenciadordeprojetos&apos;&#x0D;&#x0A;- Original element: &apos;gerenciadordeprojetos.serie_documental&apos;&#x0D;&#x0A;- Renamed element: &apos;gerenciadordeprojetos.Serie_Documental&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;serie_documental&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;gerenciadordeprojetos{serie_documental.java[serie_documental" matchStrategy="1" name="Serie_Documental" qualified="false" references="true" similarDeclarations="false" stamp="1623370083968" textual="false" version="1.0"/>
+</session>

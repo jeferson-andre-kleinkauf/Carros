@@ -1,0 +1,67 @@
+package gerenciadordeprojeto;
+
+import java.util.ArrayList;
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Object> Series = new ArrayList <Object>();
+		
+		Serie_Documental serieA = new  Serie_Documental();
+		Avaliacao aval1 = new Avaliacao();
+		aval1.setCritica("este filme щ hororroso");
+		aval1.setNota(3);
+		serieA.setTema("Amor");
+		serieA.setAno(2000);
+		serieA.setAval(aval1);
+		serieA.setSinopse("este filme щ do velho oeste");
+		serieA.setTitulo("farroeste");
+		
+		
+		Serie_Dramatica serieB = new Serie_Dramatica();
+		Avaliacao aval2 = new Avaliacao();
+		
+		//serie dramatica
+		aval2.setCritica("este filme щ bom para xuxu");
+		aval2.setNota(4);
+		serieB.setTitulo("helboy");
+		serieB.setAno(1950);
+		serieB.setAval(aval2);
+		serieB.setGenero("aчуo");
+		serieB.setSinopse("filme feito no Brasil");
+		Temporada temporada1 = new Temporada();
+		temporada1.setNumero(5);
+		temporada1.setQuantidade_epsodios(20);
+		temporada1.setSeriado(serieB);
+		Temporada temporada2 = new Temporada();
+		temporada2.setNumero(3);
+		temporada2.setQuantidade_epsodios(30);
+		temporada2.setSeriado(serieB);
+		ArrayList<Temporada> Temporadas = new ArrayList<Temporada>();
+		Temporadas.add(temporada1);
+		Temporadas.add(temporada2);
+		serieB.setTemporadas(Temporadas);
+		Series.add(serieA);
+		Series.add(serieB);
+		
+		
+		Object  x;
+		Serie_Dramatica  sd;
+		Serie_Documental  sdo;
+		 
+		for (int j = 0; j < Series.size(); j++) {
+			
+			x = Series.get(j);
+				if (x instanceof Serie_Dramatica ) {
+					sd= (Serie_Dramatica)x;
+					sd.printSerie();
+				}
+				else {
+					sdo = (Serie_Documental)x;
+					sdo.printSerie();
+				}
+				
+		}
+		
+	}
+}

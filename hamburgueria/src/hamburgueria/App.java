@@ -1,0 +1,33 @@
+package hamburgueria;
+
+import java.util.ArrayList;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ingrediente ingredienteA = new Ingrediente();
+		Ingrediente ingredienteB = new Ingrediente();
+		Hamburguer hamburguerA = new Hamburguer();
+		Hamburguer hamburguerB = new Hamburguer();
+		ArrayList<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
+		ingredientes.add(ingredienteA);
+		ingredientes.add(ingredienteB);
+		ingredienteA.setNome("queijo");
+		ingredienteB.setNome("pão");
+		hamburguerA.setNome("salada");
+		hamburguerA.setPreco(15.00);
+		hamburguerB.setNome("bacon");
+		hamburguerB.setPreco(20.00);
+		hamburguerA.setIngrediente(ingredientes);
+		hamburguerB.setIngrediente(ingredientes);
+		ArrayList<Hamburguer> hamburgueres = new ArrayList<Hamburguer>();
+		hamburgueres.add(hamburguerA);
+		hamburgueres.add(hamburguerB);
+		Cardapio cardapio = new Cardapio();
+		cardapio.setHamburgueres(hamburgueres);
+		
+		cardapio.printcardapio();
+	}
+
+}

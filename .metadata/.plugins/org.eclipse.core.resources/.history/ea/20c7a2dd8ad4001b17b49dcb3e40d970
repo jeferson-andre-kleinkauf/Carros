@@ -1,0 +1,81 @@
+package gerenciadordeprojeto;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Serie serie = new Serie();
+		
+		serie.setTitulo("um dia após amanhã");
+		serie.setSinopse("é um filme retratado em fatos reais");
+		serie.setAno(1962);
+		Avaliacao aval = new Avaliacao();
+		aval.setNota(4);
+		aval.setCritica("este filme é muito Bom");
+		serie.setAval(aval);
+		
+		Scanner ler = new Scanner(System.in);
+		String titulo;
+		int ano;
+		String sinopse;
+		int nota;
+		String critica;
+		System.out.printf("Digite o título do filme ");
+		titulo = ler.nextLine();
+		
+		System.out.printf("Digite o Ano de lançamento do filme ");
+		ano = ler.nextInt();
+		ler.nextLine();
+		System.out.printf("Digite a sinopse do filme ");
+		sinopse = ler.nextLine();
+		do {
+			do {
+				System.out.println("Digite a nota ");
+				nota = ler.nextInt();
+				ler.nextLine();
+			} while (nota < 0);
+		} while (nota > 5);
+		System.out.println("Digite a critica do filme ");
+		critica = ler.nextLine();
+		Avaliacao avali = new Avaliacao(nota, critica);
+		Serie serie2 = new Serie(titulo, sinopse, ano, avali);
+		serie.printSerie();
+		serie2.printSerie();
+		
+		ArrayList<Object> series = new ArrayList<Object>();
+		Serie_Documental serieA = new  Serie_Documental();
+		Avaliacao aval1 = new Avaliacao();
+		aval1.setCritica("este filme é hororroso");
+		aval1.setNota(3);
+		serieA.setTema("Terror");
+		serieA.setAno(2000);
+		serieA.setAval(aval1);
+		serieA.setSinopse("este filme é do velho oeste");
+		serieA.setTitulo("farroeste");
+		Serie_Dramatica serieB = new Serie_Dramatica();
+		Avaliacao aval2 = new Avaliacao();
+		aval2.setCritica("este filme é bom para xuxu");
+		aval2.setNota(4);
+		serieB.setAno(1950);
+		serieB.setAval(aval2);
+		serieB.setGenero("ação");
+		serieB.setSinopse("filme feito no Brasil");
+		Temporada temporada1 = new Temporada();
+		temporada1.setNumero(5);
+		temporada1.setQuantidade_epsodios(20);
+		temporada1.setSeriado(serieB);
+		Temporada temporada2 = new Temporada();
+		temporada2.setNumero(3);
+		temporada2.setQuantidade_epsodios(30);
+		ArrayList<Object> 
+		//estanciar duas temporadas
+		//criar uma lista de temporadas 
+		//adicionar as temporadas criadas dentro da lista
+		//adicionar a lista de temporadas dentro da serieB
+		
+		serieB.setTemporadas(null);
+	}
+}

@@ -1,0 +1,20 @@
+import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class main {
+	public static void main(string args[]) {
+		JFrame Tela = new JFrame ("Alo, Mundo");
+		JLabel Texto = new JLabel (" Linguagem Java ");
+		
+		Tela.setLayout (null);
+		Tela.getContentPane() .add(Texto);
+		
+		Texto.setBounds(30,20,210,20);
+		
+		Tela.setSize(280,100);
+		Tela.setvisible(true);
+		Tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+}

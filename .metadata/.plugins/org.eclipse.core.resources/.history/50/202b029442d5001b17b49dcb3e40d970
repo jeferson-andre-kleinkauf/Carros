@@ -1,0 +1,21 @@
+package gerenciadordeprojeto;
+
+public class Serie_Documental extends Serie {
+	private String tema;
+	public Serie_Documental() {
+		
+	}
+	public Serie_Documental (String titulo, String sinopse, int ano, String tema, Avaliacao aval) {
+		super(titulo, sinopse, ano, aval);
+		this.tema = tema;
+	}
+
+	public String getTema() {
+		return tema;
+	}
+
+	public void setTema(String tema) {
+		this.tema = tema;
+	}
+	
+}
